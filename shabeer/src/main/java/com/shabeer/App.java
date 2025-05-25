@@ -37,7 +37,7 @@ public class App
     	  System.out.print(rs.getInt("CustomerID")+"-" );
     	  System.out.println(rs.getString("FirstName")+"-" );
       }
-      
+      con.close();
       //System.setProperty("java.library.path", "path_to_dll_folder");
       System.out.println( "checking" );
       
