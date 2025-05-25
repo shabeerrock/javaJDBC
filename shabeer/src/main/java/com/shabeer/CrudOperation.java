@@ -13,7 +13,7 @@ public class CrudOperation {
 	      Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 	      Connection con = DriverManager.getConnection(url);
 	      String query = "select * from SalesLT.Customer where CustomerID in(1,2)";
-	      String ins = "insert into Employees values(2,'shabeer',1200)";
+	      String ins = "insert into Employees values(2,'sam',1200)";
 	      String upd = "update Employees set Salary = 5500 where EmployeeID = 1";
 	      String del = "DELETE FROM EMPLOYEES WHERE EmployeeID = 15";
 	      Statement st = con.createStatement();
@@ -29,6 +29,7 @@ public class CrudOperation {
 	      boolean updstatus =  st.execute(upd);
 	      System.out.println(updstatus);
 	      boolean delStatus = st.execute(del);
+	      System.out.println(delStatus);
 	      con.close();
 	      
 	      //System.setProperty("java.library.path", "path_to_dll_folder");
